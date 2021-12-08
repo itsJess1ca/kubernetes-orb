@@ -158,7 +158,7 @@ workflows:
             - orb-tools/lint
 
       - orb-tools/publish-dev:
-          orb-name: circleci/kubernetes
+          orb-name: openbean/kubernetes-orb
           context: orb-publishing
           requires:
             - orb-tools/pack
@@ -178,7 +178,7 @@ workflows:
       - integration-test-kubectl
 
       - orb-tools/dev-promote-prod-from-commit-subject:
-          orb-name: circleci/kubernetes
+          orb-name: openbean/kubernetes-orb
           context: orb-publishing
           add-pr-comment: true
           fail-if-semver-not-indicated: true
